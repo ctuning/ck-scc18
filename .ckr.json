@@ -1,0 +1,10 @@
+{
+  "data_uoa": "ck-cluster18",
+  "data_uid": "1ca4108a0485b920",
+  "data_alias": "ck-cluster18",
+  "data_name": "ck-cluster18",
+  "dict": {
+    "shared": "git",
+    "url": "https://github.com/ctuning/ck-cluster18"
+  }
+}
