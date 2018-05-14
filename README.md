@@ -5,10 +5,30 @@ Collective Knowledge workflow for CLUSTER competition at SuperComputing'18
 [![logo](https://github.com/ctuning/ck-guide-images/blob/master/logo-validated-by-the-community-simple.png)](http://cTuning.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-# Installation
+# CK Installation
+
+The minimal installation requires:
+
+* Python 2.7 or 3.3+ (limitation is mainly due to unitests)
+* Git command line client.
+
+You can install CK in your local user space as following:
 
 ```
-# pip install ck
+$ git clone http://github.com/ctuning/ck
+$ export PATH=$PWD/ck/bin:$PATH
+$ export PYTHONPATH=$PWD/ck:$PYTHONPATH
+```
+
+You can also install CK via PIP with sudo to avoid setting up environment variables yourself:
+
+```
+$ sudo pip install ck
+```
+
+# CK workflow installation with application dependencies
+
+```
 $ ck pull repo:ck-cluster18
 ```
 
