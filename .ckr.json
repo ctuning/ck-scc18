@@ -5,6 +5,11 @@
   "data_name": "ck-cluster18",
   "dict": {
     "shared": "git",
-    "url": "https://github.com/ctuning/ck-cluster18"
+    "url": "https://github.com/ctuning/ck-cluster18",
+    "repo_deps": [
+      {
+        "repo_uoa": "ck-autotuning"
+      }
+    ]
   }
 }
