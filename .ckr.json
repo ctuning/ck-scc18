@@ -9,6 +9,15 @@
     "repo_deps": [
       {
         "repo_uoa": "ck-autotuning"
+      },
+      {
+        "repo_uoa": "ck-dissemination-modules"
+      },
+      {
+        "repo_uoa": "ck-artifact-evaluation"
+      },
+      {
+        "repo_uoa": "ck-docker"
       }
     ]
   }
