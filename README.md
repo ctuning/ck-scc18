@@ -106,11 +106,56 @@ $ ck show env
 $ ck run program:seissol-netcdf
 ```
 
-$ Customizing SeisSol workflow
+# Customizing SeisSol workflow
 
 ```
-$ ck run program:seissol-netcdf --env.
+$ ck run program:seissol-netcdf --env.MPI_NUM_PROCESSES=16 --env.OMP_NUM_THREADS=54
 ```
+
+## SuperMUC  Phase 2
+
+```
+$ ck run program:seissol-netcdf --env.MPI_NUM_PROCESSES=<<processes>> --env.OMP_NUM_THREADS=54 --env.KMP_AFFINITY="compact,granularity=thread"
+```
+
+## Shaheen  II
+
+```
+$ ck run program:seissol-netcdf --env.MPI_NUM_PROCESSES=<<processes>> --env.OMP_NUM_THREADS=62 --env.KMP_AFFINITY="compact,granularity=thread"
+```
+
+## Cori
+
+```
+$ ck run program:seissol-netcdf --env.MPI_NUM_PROCESSES=<<processes>> --env.OMP_NUM_THREADS=65 --env.KMP_AFFINITY="proclist =[2-66],explicit,granularity=thread"
+```
+
+## Extra parameters
+
+```
+$ export XDMFWRITER_ALIGNMENT=8388608
+$ export XDMFWRITER_BLOCK_SIZE=8388608
+$ export SEISSOL_CHECKPOINT_ALIGNMENT=8388608
+$ export SEISSOL_CHECKPOINT_DIRECT=1
+$ export ASYNC_MODE=THREAD
+$ export ASYNC_BUFFER_ALIGNMENT=8388608
+```
+
+or via CK
+
+```
+$ ck run program:seissol-netcdf ... --env.XDMFWRITER_ALIGNMENT=8388608 \
+    --env.XDMFWRITER_BLOCK_SIZE=8388608 \
+    --env.SEISSOL_CHECKPOINT_ALIGNMENT=8388608 \
+    --env.SEISSOL_CHECKPOINT_DIRECT=1 \
+    --env.ASYNC_MODE=THREAD \
+    --env.ASYNC_BUFFER_ALIGNMENT=8388608
+```
+
+# Next steps
+
+Adding CK modules and scripts to automatically run and validate all experiments, share results 
+and generate interactive article similar to [this one](http://cKnowledge.org/rpi-crowd-tuning).
 
 # Feedback
 
