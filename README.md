@@ -92,7 +92,7 @@ OpenMPI will be later automatically detected or installed when you run seissol p
 # Installing SeisSol version from the above paper
 
 ```
-ck install package:lib-seissol-201703
+ck install package:lib-seissol-201703 --reuse_deps
 ```
 
 CK will automatically detect or install other subdependencies and will register this library in the virtual CK environment:
