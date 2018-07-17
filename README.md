@@ -31,7 +31,7 @@ $ sudo pip install ck
 ```
 
 See [minimal CK installation guide](https://github.com/ctuning/ck#minimal-installation) for further details.
-You can also read this [Getting started guide](https://github.com/ctuning/ck/wiki/First-feeling) to grasp CK concepts.
+You can also read this [Getting started guide](https://github.com/ctuning/ck/wiki/First-steps) to grasp CK concepts.
 
 
 # CK workflow installation with dependencies
