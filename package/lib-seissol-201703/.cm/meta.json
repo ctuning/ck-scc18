@@ -56,6 +56,7 @@
     }, 
     "tool-scons": {
       "local": "yes", 
+      "skip_default": "yes",
       "name": "Tool Scons Python", 
       "sort": 16, 
       "tags": "tool,scons"
