@@ -24,6 +24,15 @@
     "version": "201703"
   }, 
   "deps": {
+    "python": {
+      "local": "yes", 
+      "name": "Python < 3", 
+      "sort": 0, 
+      "tags": "compiler,python",
+      "version_to": [
+        3
+      ]
+    }, 
     "compiler": {
       "local": "yes", 
       "name": "C compiler", 
