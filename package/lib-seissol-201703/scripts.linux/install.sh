@@ -44,7 +44,7 @@ EXTRA_PYTHON_SITE=${INSTALL_DIR}/python-lib
 rm -rf ${EXTRA_PYTHON_SITE}
 mkdir -p ${EXTRA_PYTHON_SITE}
 
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed lxml -t ${EXTRA_PYTHON_SITE}  ${SYS}
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed lxml scipy -t ${EXTRA_PYTHON_SITE}  ${SYS}
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1
