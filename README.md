@@ -119,9 +119,9 @@ If required GCC is in an unusual path, you can help CK detect it by providing a 
 $ ck detect soft:compiler.gcc --search_dirs={path to GCC installation}
 ```
 
-If you still encounters problems, please feel free to get in touch with the 
-[CK community](https://github.com/ctuning/ck/wiki/Contacts). 
-Remember that the point of CK is to continuously and collaboratively 
+If you still encounter problems, please feel free to get in touch with the 
+[CK community](https://github.com/ctuning/ck/wiki/Contacts) and we will help you fix them. 
+You feedback is very important since the whole point of CK is to continuously and collaboratively 
 improve all shared research workflows and components thus gradually improving 
 their stability and reproducibility across diverse platforms and environments!
 
