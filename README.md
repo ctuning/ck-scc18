@@ -1,4 +1,4 @@
-Portable [Collective Knowledge](https://github.com/ctuning/ck) workflow and reusable components for the 
+Automated and portable [Collective Knowledge](http://cKnowledge.org) workflow with unified and reusable components for the 
 [CLUSTER competition at Supercomputing'18](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge).
 
 Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
@@ -55,7 +55,7 @@ $ ck detect soft --tags=compiler,icc
 
 Note that if Intel compiler was not automatically found, you can provide a path to Intel installation as follows:
 ```
-$ ck detct soft --tags=compiler,icc --search-dirs=<<INSTALLATION_PATH>>
+$ ck detect soft --tags=compiler,icc --search-dirs=<<INSTALLATION_PATH>>
 ```
 
 ### Intel MPI library
@@ -95,10 +95,35 @@ OpenMPI will be later automatically detected or installed when you run seissol p
 ck install package:lib-seissol-201703 --reuse_deps
 ```
 
-CK will automatically detect or install other subdependencies and will register this library in the virtual CK environment:
+CK will automatically detect or install other sub-dependencies and will register this library in the virtual CK environment:
 ```
 $ ck show env
 ```
+
+## Troubleshooting
+
+If compilation fails due to incompatible GCC (we had some issues building SeisSol using GCC 7.3 on a few platforms), 
+you can detect other GCC versions via CK and then use them as follows:
+```
+$ ck detect soft:compiler.gcc
+
+```
+
+and then restart SeisSol installation;
+```
+ck install package:lib-seissol-201703 --reuse_deps --rebuild
+```
+
+If required GCC is in an unusual path, you can help CK detect it by providing a search path as follows:
+```
+$ ck detect soft:compiler.gcc --search_dirs={path to GCC installation}
+```
+
+If you still encounters problems, please feel free to get in touch with the 
+[CK community](https://github.com/ctuning/ck/wiki/Contacts). 
+Remember that the point of CK is to continuously and collaboratively 
+improve all shared research workflows and components thus gradually improving 
+their stability and reproducibility across diverse platforms and environments!
 
 # Running SeisSol workflow
 
