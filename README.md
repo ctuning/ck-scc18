@@ -37,7 +37,7 @@ You can also read this [Getting started guide](https://github.com/ctuning/ck/wik
 # CK workflow installation with dependencies
 
 ```
-$ ck pull repo:ck-cluster18
+$ ck pull repo:ck-scc18
 ```
 
 # Choosing which compiler and MPI to use
