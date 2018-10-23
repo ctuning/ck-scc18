@@ -157,6 +157,7 @@ $ ck virtual env --tags=lib,seissol
 > echo ${CK_ENV_LIB_SEISSOL_MAPLE}
 > echo ${CK_ENV_LIB_SEISSOL_SET}
 > echo ${CK_ENV_LIB_SEISSOL_SRC}
+```
 
 # Customizing SeisSol workflow
 
