@@ -1,8 +1,8 @@
 [![compatibility](https://github.com/ctuning/ck-guide-images/blob/master/ck-compatible.svg)](https://github.com/ctuning/ck)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-Automated, portable and customizable [Collective Knowledge](http://cKnowledge.org) workflow and components 
-for the [Student Cluster Competition at Supercomputing'18](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge).
+Automated, portable and customizable [Collective Knowledge](http://cKnowledge.org) workflow and research components 
+for the [SC18 Student Cluster Competition Reproducibility Challenge](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge).
 
 Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
 
