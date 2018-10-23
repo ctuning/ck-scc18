@@ -1,12 +1,12 @@
-Automated and portable [Collective Knowledge](http://cKnowledge.org) workflow with unified and reusable components for the 
-[CLUSTER competition at Supercomputing'18](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge).
-
-Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
-
 [![logo](https://github.com/ctuning/ck-guide-images/blob/master/logo-powered-by-ck.png)](https://github.com/ctuning/ck)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
+Automated, portable and customizable [Collective Knowledge](http://cKnowledge.org) workflow and components 
+for the [Student Cluster Competition at Supercomputing'18](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge).
 
+Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
+
+Original sources: https://github.com/SeisSol/SeisSol
 
 # CK Installation
 
@@ -60,8 +60,8 @@ $ ck detect soft --tags=compiler,icc --search-dirs=<<INSTALLATION_PATH>>
 
 ### Intel MPI library
 
-Install Intel MPI lib following the instruction (here)[https://software.seek.intel.com/performance-libraries]
-or via (**apt**)[https://software.intel.com/en-us/articles/installing-intel-free-libs-and-python-apt-repo]
+Install Intel MPI lib following the instruction [here](https://software.seek.intel.com/performance-libraries)
+or via [**apt**](https://software.intel.com/en-us/articles/installing-intel-free-libs-and-python-apt-repo)
 
 ```
 1. wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
@@ -89,10 +89,22 @@ $ ck detect soft --tags=compiler,gcc
 
 OpenMPI will be later automatically detected or installed when you run seissol program for the first time.
 
+# Installing and testing SeisSol proxy version from the above paper
+
+```
+ck install package:lib-seissol-scc18-proxy --reuse_deps
+ck run program:seissol-proxy
+```
+
 # Installing SeisSol version from the above paper
 
 ```
-ck install package:lib-seissol-201703 --reuse_deps
+ck install package:lib-seissol-scc18 --reuse_deps
+```
+
+CK will automatically detect or install other sub-dependencies and will register this library in the virtual CK environment:
+```
+$ ck show env
 ```
 
 CK will automatically detect or install other sub-dependencies and will register this library in the virtual CK environment:
@@ -111,7 +123,7 @@ $ ck detect soft:compiler.gcc
 
 and then restart SeisSol installation;
 ```
-ck install package:lib-seissol-201703 --reuse_deps --rebuild
+ck install package:lib-seissol-scc18 --reuse_deps --rebuild
 ```
 
 If required GCC is in an unusual path, you can help CK detect it by providing a search path as follows:
@@ -127,9 +139,24 @@ their stability and reproducibility across diverse platforms and environments!
 
 # Running SeisSol workflow
 
+Running SeisSol is an on-going work:
+
 ```
 $ ck run program:seissol-netcdf
 ```
+
+In the mean time, you can start CK virtual environment and run the code yourself as follows:
+```
+$ ck virtual env --tags=lib,seissol
+
+> cd ${CK_ENV_LIB_SEISSOL_BIN}
+> ls
+
+> echo ${CK_ENV_LIB_SEISSOL_BINARY}
+> echo ${CK_ENV_LIB_SEISSOL_BINARY_FULL}
+> echo ${CK_ENV_LIB_SEISSOL_MAPLE}
+> echo ${CK_ENV_LIB_SEISSOL_SET}
+> echo ${CK_ENV_LIB_SEISSOL_SRC}
 
 # Customizing SeisSol workflow
 

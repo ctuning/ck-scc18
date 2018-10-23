@@ -1,0 +1,12 @@
+diff -ruN src/Solver/Interoperability.cpp src-new/Solver/Interoperability.cpp
+--- src/src/Solver/Interoperability.cpp	2018-04-12 15:45:11.862707600 +0100
++++ src-new/src/Solver/Interoperability.cpp	2018-04-12 15:47:36.174033357 +0100
+@@ -572,7 +572,7 @@
+ 	  seissol::SeisSol::main.checkPointManager().setBackend(checkpoint::SIONLIB);
+   else
+ 	  logError() << "Unknown checkpoint backend";
+-  	  seissol::SeisSol::main.checkPointManager().setFilename( i_checkPointFilename );
++  seissol::SeisSol::main.checkPointManager().setFilename( i_checkPointFilename );
+ }
+ 
+ void seissol::Interoperability::getIntegrationMask( int* i_integrationMask ) {
