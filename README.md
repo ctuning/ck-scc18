@@ -10,8 +10,9 @@ Original sources: https://github.com/SeisSol/SeisSol
 
 # On-going work
 
-* Add installation of software dependencies via [spack](https://github.com/spack/spack)
-* Add execution of seissol via [Flux](https://github.com/flux-framework/flux-core)
+* Add installation of software dependencies via [spack](https://github.com/spack/spack);
+* Add execution of seissol via [Flux](https://github.com/flux-framework/flux-core);
+* Add public [CK scoreboard](http://cKnowledge.org/repo) to exchange results.
 
 # CK Installation
 
