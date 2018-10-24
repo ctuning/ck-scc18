@@ -8,6 +8,11 @@ Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra
 
 Original sources: https://github.com/SeisSol/SeisSol
 
+# On-going work
+
+* Add installation of software dependencies via [spack](https://github.com/spack/spack)
+* Add execution of seissol via [Flux](https://github.com/flux-framework/flux-core)
+
 # CK Installation
 
 The minimal installation requires:
