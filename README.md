@@ -8,12 +8,6 @@ Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra
 
 Original sources: https://github.com/SeisSol/SeisSol
 
-# On-going work
-
-* Add installation of software dependencies via [spack](https://github.com/spack/spack);
-* Add execution of seissol via [Flux](https://github.com/flux-framework/flux-core);
-* Add public [CK scoreboard](http://cKnowledge.org/repo) to exchange results.
-
 # CK Installation
 
 The minimal installation requires:
@@ -215,6 +209,10 @@ $ ck run program:seissol-netcdf ... --env.XDMFWRITER_ALIGNMENT=8388608 \
 
 Adding CK modules and scripts to automatically run and validate all experiments, share results 
 and generate interactive article similar to [this one](http://cKnowledge.org/rpi-crowd-tuning).
+
+* LLNL: add installation of software dependencies via [spack](https://github.com/spack/spack);
+* LLNL+dividiti: Prototype execution of seissol via [Flux](https://github.com/flux-framework/flux-core);
+* dividiti: add public [CK scoreboard](http://cKnowledge.org/repo) to exchange results.
 
 # Feedback
 
