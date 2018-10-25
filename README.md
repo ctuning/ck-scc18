@@ -212,8 +212,7 @@ and generate interactive article similar to [this one](http://cKnowledge.org/rpi
 
 * LLNL: add installation of software dependencies via [spack](https://github.com/spack/spack);
 * LLNL+dividiti: Prototype execution of seissol via [Flux](https://github.com/flux-framework/flux-core);
+* Check [easybuild](https://easybuild.readthedocs.io/en/latest);
 * dividiti: add public [CK scoreboard](http://cKnowledge.org/repo) to exchange results.
-
-# Feedback
 
 Get in touch with the CK community about this workflow and CK components [here](https://github.com/ctuning/ck/wiki/Contacts). 
