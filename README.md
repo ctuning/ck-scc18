@@ -1,19 +1,22 @@
 [![compatibility](https://github.com/ctuning/ck-guide-images/blob/master/ck-compatible.svg)](https://github.com/ctuning/ck)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-Automated, portable and customizable [Collective Knowledge](http://cKnowledge.org) workflow and research components 
-for the [SC18 Student Cluster Competition Reproducibility Challenge](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge).
+This repository contains [Collective Knowledge](https://github.com/ctuning/ck) 
+workflows and [reusable research components](http://cKnowledge.org) 
+to automate installation, execution and customization of SeisSol application 
+from the [SC18 Student Cluster Competition Reproducibility Challenge](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge)
+across diverse platforms and environments.
 
-Paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
-
-Original sources: https://github.com/SeisSol/SeisSol
+* Collective Knowledge concepts and long-term vision to automate and crowdsource complex HPC experiments: https://bit.ly/reboot-open-science
+* SeisSol paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
+* Original SeisSol application: https://github.com/SeisSol/SeisSol
 
 # CK Installation
 
-The minimal installation requires:
+CK requires minimal dependencies:
 
-* Python 2.7 or 3.3+ (limitation is mainly due to unitests)
-* Git command line client
+* Python 2.7 or 3+
+* git command line client
 * wget tool
 
 You can install CK in your local user space as follows:
@@ -30,9 +33,17 @@ You can also install CK via PIP with sudo to avoid setting up environment variab
 $ sudo pip install ck
 ```
 
-See [minimal CK installation guide](https://github.com/ctuning/ck#minimal-installation) for further details.
-You can also read this [Getting started guide](https://github.com/ctuning/ck/wiki/First-steps) to grasp CK concepts.
+Please check [minimal CK installation guide](https://github.com/ctuning/ck#minimal-installation) 
+and [CK customization](https://github.com/ctuning/ck/wiki/Customization) 
+if you need more details about installation process.
 
+You can also find this [Getting started guide](https://github.com/ctuning/ck/wiki/First-steps) 
+useful if you are not yet familiar with the CK framework.
+
+Finally, please bear in mind that CK is a continuously evolving community project similar to Wikipedia,
+so if you don't like something or something is not working, please do not hesistate to send your feedback
+to the [public CK mailing list](https://groups.google.com/forum/#!forum/collective-knowledge)
+or open tickets at related [CK GitHub repositories](http://cKnowledge.org/shared-repos.html)!
 
 # CK workflow installation with dependencies
 
