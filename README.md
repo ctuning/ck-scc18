@@ -42,8 +42,9 @@ useful if you are not yet familiar with the CK framework.
 
 Finally, please bear in mind that CK is a continuously evolving community project similar to Wikipedia,
 so if you don't like something or something is not working, please do not hesistate to send your feedback
-to the [public CK mailing list](https://groups.google.com/forum/#!forum/collective-knowledge)
-or open tickets at related [CK GitHub repositories](http://cKnowledge.org/shared-repos.html)!
+to the [public CK mailing list](https://groups.google.com/forum/#!forum/collective-knowledge),
+open tickets in related [CK GitHub repositories](http://cKnowledge.org/shared-repos.html),
+or even contribute patches, updates, new workflows and research components!
 
 # CK workflow installation with dependencies
 
