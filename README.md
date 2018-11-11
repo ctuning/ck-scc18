@@ -328,8 +328,7 @@ $ ck run program:seissol-netcdf ... --env.XDMFWRITER_ALIGNMENT=8388608 \
 Adding CK modules and scripts to automatically run and validate all experiments, share results 
 and generate interactive article similar to [this one](http://cKnowledge.org/rpi-crowd-tuning).
 
-* LLNL: add installation of SeisSol dependencies via [spack](https://github.com/spack/spack);
-* LLNL+dividiti: Prototype execution of seissol via [Flux](https://github.com/flux-framework/flux-core);
-* Check [easybuild](https://easybuild.readthedocs.io/en/latest);
+* LLNL: add installation of all SeisSol dependencies with fixed versions (!) via [spack](https://github.com/spack/spack);
+* LLNL+dividiti: automate execution of SeisSol MPI via [Flux](https://github.com/flux-framework/flux-core);
+* UGent: check installation of dependencies via [easybuild](https://easybuild.readthedocs.io/en/latest);
 * dividiti: add public [CK scoreboard](http://cKnowledge.org/repo) to exchange results.
-
