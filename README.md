@@ -16,7 +16,7 @@ across different platforms, environments and datasets:
 
 # Contributors
 
-* Grigori Fursin, dividiti/cTuning foundation (SC19 reproducibility vice-chair)
+* Grigori Fursin, dividiti/cTuning foundation
 * Flavio Vella, Free University of Bozen-Bolzano
 * Stephen Herbein, LLNL
 
