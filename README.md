@@ -4,12 +4,13 @@
 This repository contains a beta [Collective Knowledge](https://github.com/ctuning/ck) 
 workflow to automate installation, execution and customization of SeisSol application 
 from the [SC18 Student Cluster Competition Reproducibility Challenge](https://sc18.supercomputing.org/sc18-announces-selected-paper-for-next-student-cluster-competition-reproducibility-challenge)
-across different platforms, environments and datasets.
+across different platforms, environments and datasets:
 
 * SeisSol paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
 * Original SeisSol application: https://github.com/SeisSol/SeisSol
 * Collective Knowledge concepts and long-term vision to automate and crowdsource complex HPC experiments: https://bit.ly/reboot-open-science
 * CK features: https://github.com/ctuning/ck/wiki/Features
+* Related RESCUE-HPC@SC18 workshop: http://rescue-hpc.org
 
 *Note that this is an ongoing and evolving project!*
 
