@@ -19,7 +19,6 @@ across different platforms, environments and datasets:
 * Grigori Fursin, dividiti/cTuning foundation (SC19 reproducibility vice-chair)
 * Flavio Vella, Free University of Bozen-Bolzano
 * Stephen Herbein, LLNL
-* Todd Gamblin, LLNL (SC18 program co-chair)
 
 # CK Installation
 
