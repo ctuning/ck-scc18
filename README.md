@@ -11,6 +11,14 @@ across different platforms, environments and datasets.
 * Collective Knowledge concepts and long-term vision to automate and crowdsource complex HPC experiments: https://bit.ly/reboot-open-science
 * CK features: https://github.com/ctuning/ck/wiki/Features
 
+*Note that this is an ongoing and evolving project*
+
+# Contributors
+
+* Grigori Fursin, dividiti/cTuning foundation (SC19 reproducibility vice-chair)
+* Flavio Vella, Free University of Bozen-Bolzano
+* Stephen Herbein, LLNL
+* Todd Gamblin, LLNL (SC18 program co-chair)
 
 # CK Installation
 
@@ -37,7 +45,6 @@ $ sudo pip install ck
 Please check [minimal CK installation guide](https://github.com/ctuning/ck#minimal-installation) 
 and [CK customization](https://github.com/ctuning/ck/wiki/Customization) 
 if you need more details about installation process.
-
 You can also find this [CK getting started guide](https://github.com/ctuning/ck/wiki/First-steps) 
 useful if you are not yet familiar with the CK framework.
 
@@ -60,7 +67,6 @@ CK will automatically check dependencies
 on other [CK repositories](http://cKnowledge.org/shared-repos.html) 
 based on this [.ckr.json](https://github.com/ctuning/ck-scc18/blob/master/.ckr.json#L9),
 and will also install them in a user environment. 
-
 In this way, we a user can take advantage of all other CK [modules](http://cKnowledge.org/shared-modules.html),
 [software detection plugins](http://cKnowledge.org/shared-soft-detection-plugins.html)
 and [packages](http://cKnowledge.org/shared-packages.html) shared by the community!
@@ -103,7 +109,7 @@ them to new platforms and environments, in the spirit of Wikipedia!*
 
 For example, our LLNL colleagues already noticed that current software detection is very slow
 on NFS or some software detection plugins can hang, and opened a ticket 
-which we will be resolving soon: https://github.com/ctuning/ck-env/issues/85 .
+which we will be resolving soon: https://github.com/ctuning/ck-env/issues/85.
 Feel free to join our [active CK Slack channel]() to monitor the progress and 
 participate in discussions!
 
@@ -244,7 +250,7 @@ You feedback is very important since the whole point of CK is to continuously an
 improve all shared research workflows and components thus gradually improving 
 their stability and reproducibility across diverse platforms and environments!
 
-# Running SeisSol workflow
+# Running SeisSol MPI workflow
 
 *We are now working with the community to automate execution of this application via mpirun - 
 please join our [CK mailing list](https://groups.google.com/forum/#!forum/collective-knowledge)
