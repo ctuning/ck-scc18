@@ -11,7 +11,7 @@ across different platforms, environments and datasets.
 * Collective Knowledge concepts and long-term vision to automate and crowdsource complex HPC experiments: https://bit.ly/reboot-open-science
 * CK features: https://github.com/ctuning/ck/wiki/Features
 
-*Note that this is an ongoing and evolving project*
+*Note that this is an ongoing and evolving project!*
 
 # Contributors
 
