@@ -8,53 +8,40 @@ across different platforms, environments and datasets:
 
 * SeisSol paper: [Extreme scale multi-physics simulations of the tsunamigenic 2004 sumatra megathrust earthquake](https://dl.acm.org/citation.cfm?id=3126948)
 * Original SeisSol application: https://github.com/SeisSol/SeisSol
-* Collective Knowledge concepts and long-term vision to automate and crowdsource complex HPC experiments: https://bit.ly/reboot-open-science
-* CK features: https://github.com/ctuning/ck/wiki/Features
+* Collective Knowledge project: http://cKnowledge.org
+* Collective Knowledge vision: https://bit.ly/reboot-open-science
+* Collective Knowledge Getting Started Guide: https://github.com/ctuning/ck/wiki/First-steps
 * Related RESCUE-HPC@SC18 workshop: http://rescue-hpc.org
 
 *Note that this is an ongoing and evolving project!*
 
-# Contributors
+# Workflow authors and contributors
 
 * Grigori Fursin, dividiti/cTuning foundation
 * Flavio Vella, Free University of Bozen-Bolzano
 * Stephen Herbein, LLNL
+* Carsten Uphoff, TUM
+* Michael Bader, TUM
 
-# CK Installation
+# CK installation and customization
 
-CK requires minimal dependencies:
+First you need to install Collective Knowledge framework (CK) as described 
+[here](https://github.com/ctuning/ck#Installation). 
 
-* Python 2.7 or 3+
-* git command line client
-* wget tool
-
-You can install CK in your local user space as follows:
-
-```
-$ git clone http://github.com/ctuning/ck
-$ export PATH=$PWD/ck/bin:$PATH
-$ export PYTHONPATH=$PWD/ck:$PYTHONPATH
-```
-
-You can also install CK via PIP with sudo to avoid setting up environment variables yourself:
-
-```
-$ sudo pip install ck
-```
-
-Please check [minimal CK installation guide](https://github.com/ctuning/ck#minimal-installation) 
-and [CK customization](https://github.com/ctuning/ck/wiki/Customization) 
-if you need more details about installation process.
-You can also find this [CK getting started guide](https://github.com/ctuning/ck/wiki/First-steps) 
-useful if you are not yet familiar with the CK framework.
-
-Finally, please bear in mind that [CK](http://cKnowledge.org) is a continuously evolving community project similar to Wikipedia,
+Note that [CK](https://github.com/ctuning/ck/wiki) is a continuously evolving community project similar to Wikipedia,
 so if you don't like something or something is not working, please do not hesitate to send your feedback
 to the [public mailing list](https://groups.google.com/forum/#!forum/collective-knowledge),
 open tickets in related [CK GitHub repositories](http://cKnowledge.org/shared-repos.html),
 or even contribute patches, updates, new workflows and research components!
 
+You may also want to check [CK customization](https://github.com/ctuning/ck/wiki/Customization).
+For example, you can specify directories where CK should search for already installed software
+when adapting workflows to your platform particularly if you are using 
+[Spack](http://spack.io) or [EasyBuild](https://easybuild.readthedocs.io) package managers:
 
+```
+$ ck set kernel var.soft_search_dirs="{path1 to already installed dependencies},{path2}..."
+```
 
 # CK workflow installation
 
@@ -71,7 +58,11 @@ In this way, we a user can take advantage of all other CK [modules](http://cKnow
 [software detection plugins](http://cKnowledge.org/shared-soft-detection-plugins.html)
 and [packages](http://cKnowledge.org/shared-packages.html) shared by the community!
 
-
+You can update all CK components (including CK framework if you installed it from GitHub) 
+at any time as follows:
+```
+$ ck pull all --kernel
+```
 
 # SeisSol proxy execution via CK workflow while adapting to a user environment
 
