@@ -10,7 +10,7 @@
   "process_in_tmp": "yes", 
   "program": "yes", 
   "run_cmds": {
-    "default": {
+    "mpi": {
       "ignore_return_code": "no", 
       "run_time": {
         "pre_process_via_ck": {
