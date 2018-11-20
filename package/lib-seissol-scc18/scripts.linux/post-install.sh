@@ -21,7 +21,7 @@ echo "Post install script"
 DEST_SRC=${INSTALL_DIR}/install/bin
 mkdir -p ${DEST_SRC}
 
-MAPLE_DIR=${INSTALL_DIR}/src/Maple
+MAPLE_DIR=${INSTALL_DIR}/src/Maple/
 echo ${MAPLE_DIR}
 
 echo ${MAPLE_DIR} > ${DEST_SRC}/DGPATH

@@ -140,7 +140,7 @@ def setup(i):
 
        maple_path=os.path.join(ps, 'Maple')
        if os.path.isdir(maple_path):
-          env[ep+'_MAPLE']=maple_path
+          env[ep+'_MAPLE']=maple_path+os.sep
 
     # Check binary
     fbin=''
