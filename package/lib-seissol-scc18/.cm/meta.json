@@ -57,7 +57,7 @@
     "python": {
       "local": "yes", 
       "name": "Python < 3", 
-      "sort": 0, 
+      "sort": 100, 
       "tags": "compiler,python", 
       "version_to": [
         3
