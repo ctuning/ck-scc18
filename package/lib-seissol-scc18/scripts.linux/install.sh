@@ -65,12 +65,17 @@ fi
 # i.e.,  arch: .  Valid values are: ['snoarch', 'dnoarch', 'swsm', 'dwsm', 'ssnb', 'dsnb', 'sknc', 'dknc', 'shsw', 'dhsw', 'sknl', 'dknl'
 # dsnb = sandy bridge
 scons -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS}  \
-       order=6 compileMode=release \
-       generatedKernels=yes arch=${CK_SEISSOL_TARGET_ARCH} \
-       parallelization=hybrid commThread=yes \
-       netcdf=yes netcdfDir=${CK_ENV_LIB_NETCDF} \
+       order=${CK_SEISSOL_ORDER} \
+       compileMode=${CK_SEISSOL_COMPILE_MODE} \
+       generatedKernels=${CK_SEISSOL_GENERATED_KERNELS} \
+       arch=${CK_SEISSOL_TARGET_ARCH} \
+       parallelization=${CK_SEISSOL_PARALLELIZATION} \
+       commThread=yes \
+       netcdf=yes \
+       netcdfDir=${CK_ENV_LIB_NETCDF} \
        compiler=${COMPILER_TYPE} \
-       hdf5=yes hdf5Dir=${CK_ENV_LIB_HDF5}
+       hdf5=${CK_SEISSOL_HDF5} \
+       hdf5Dir=${CK_ENV_LIB_HDF5}
 
 if [ "${?}" != "0" ] ; then
     echo "Error: compilation failed!"

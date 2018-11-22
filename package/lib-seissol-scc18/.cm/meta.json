@@ -5,6 +5,11 @@
     "git_src_dir": "src", 
     "install_env": {
       "CK_SEISSOL_TARGET_ARCH": "dsnb", 
+      "CK_SEISSOL_ORDER": "6", 
+      "CK_SEISSOL_PARALLELIZATION": "hybrid", 
+      "CK_SEISSOL_GENERATED_KERNELS": "yes",
+      "CK_SEISSOL_COMPILE_MODE": "release",
+      "CK_SEISSOL_HDF5": "none",
       "PACKAGE_AUTOGEN": "NO", 
       "PACKAGE_BUILD_TYPE": "make", 
       "PACKAGE_CONFIGURE_FLAGS": "", 

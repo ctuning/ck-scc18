@@ -1,3 +1,6 @@
+* 20181122 - [FGG] major update of SeisSol library (including build customization)
+                   and execution with Job managers (SLURM)
+
 * 20181022 - [FGG] added SeisSol proxy app
 
 * 20180711 - [FGG] first release

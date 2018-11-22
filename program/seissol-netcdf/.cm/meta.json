@@ -13,25 +13,14 @@
     "mpi": {
       "ignore_return_code": "no", 
       "run_time": {
+        "post_process_cmds": [
+          "python $#src_path_local#$ck_process.py"
+        ], 
+        "post_process_via_ck": "yes", 
         "pre_process_via_ck": {
-          "script_name": "ck_preprocess"
+          "script_name": "ck_process"
         }, 
-        "run_cmd_main": "$<<CK_ENV_LIB_MPI_RUN_FULL>>$ -np $<<MPI_NUM_PROCESSES>>$ $<<CK_ENV_LIB_SEISSOL_BINARY_FULL>>$ $<<CK_ENV_DATASET_SEISSOL_NAME>>$", 
-        "run_cmd_out1": "stdout.log", 
-        "run_cmd_out2": "stderr.log", 
-        "run_output_files": [
-          "stdout.log", 
-          "stderr.log"
-        ]
-      }
-    }, 
-    "no-mpi": {
-      "ignore_return_code": "no", 
-      "run_time": {
-        "pre_process_via_ck": {
-          "script_name": "ck_preprocess"
-        }, 
-        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_BINARY_FULL>>$ $<<CK_ENV_DATASET_SEISSOL_NAME>>$", 
+        "run_cmd_main": "../ck_run$#script_ext#$ mpi", 
         "run_cmd_out1": "stdout.log", 
         "run_cmd_out2": "stderr.log", 
         "run_output_files": [
@@ -53,11 +42,19 @@
       "name": "SeisSol Library (netcdf)", 
       "sort": 10, 
       "tags": "lib,seissol,vnetcdf"
-    }
+    } 
   }, 
   "run_vars": {
     "MPI_NUM_PROCESSES": 1, 
-    "OMP_NUM_THREADS": 1
+    "OMP_NUM_THREADS": 1,
+    "SBATCH_JOB_NAME": "ck-scc18",
+    "SBATCH_TIME":"00:05:00",
+    "SBATCH_NODES":20,
+    "SBATCH_NTASKS_PER_CORE":1,
+    "SBATCH_NTASKS_PER_NODE":1,
+    "SBATCH_CPU_PER_TASK":1,
+    "SBATCH_PARTITION":"normal",
+    "SBATCH_CONSTRAINT":"mc"
   }, 
   "tags": [
     "scientific", 
