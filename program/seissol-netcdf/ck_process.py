@@ -1,17 +1,10 @@
 #
-# Convert raw output of the Caffe 'time' command
-# to the CK timing format.
-#
 # Developers:
-#   - Grigori Fursin, cTuning foundation / dividiti, 2016
-#   - Anton Lokhmotov, dividiti, 2016-2017
+#   - Grigori Fursin, cTuning foundation / dividiti, 2018
 #
 
 import os
 import sys
-
-### copy linux directory 
-import shutil, errno
 
 # *********************************************************************************
 # Pre-process function
@@ -126,7 +119,7 @@ def ck_preprocess(i):
     return rr
 
 # *********************************************************************************
-# Pre-process function
+# Post-process function
 
 def ck_postprocess(i):
     ck=i['ck_kernel']
@@ -134,11 +127,14 @@ def ck_postprocess(i):
     env=i['env']
     deps=i['deps']
 
-    # Dictionary to return.
+    # Dictionary of last run to save
     d={}
 
     rr={}
     rr['return']=0
+
+    d['env']=env
+    d['deps']=deps
 
     # Check output file
     output_file=rt['run_cmd_out1']
@@ -164,6 +160,12 @@ def ck_postprocess(i):
 
                     ck.out("")
                     ck.out("SLURM job: "+job)
+
+                    d['job_id']=job
+
+    # Save last run info
+    r=ck.save_json_to_file({'json_file':'tmp-last-run.json', 'dict':d, 'sort_keys':'yes'})
+    if r['return']>0: return r
 
     return rr
 

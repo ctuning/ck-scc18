@@ -3,8 +3,7 @@
   "data_name": "seissol-proxy", 
   "no_compile": "yes", 
   "no_target_file": "yes", 
-  "print_files_after_run": [
-  ], 
+  "print_files_after_run": [], 
   "process_in_tmp": "yes", 
   "program": "yes", 
   "run_cmds": {
@@ -12,10 +11,9 @@
       "ignore_return_code": "no", 
       "run_time": {
         "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/flops_per_cell", 
-        "run_output_files": [
-        ]
+        "run_output_files": []
       }
-    } 
+    }
   }, 
   "run_deps": {
     "lib-seissol-proxy": {
@@ -25,8 +23,7 @@
       "tags": "lib,seissol-proxy"
     }
   }, 
-  "run_vars": {
-  }, 
+  "run_vars": {}, 
   "tags": [
     "scientific", 
     "seissol-proxy", 

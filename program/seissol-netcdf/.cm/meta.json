@@ -3,15 +3,29 @@
   "data_name": "seissol-netcdf", 
   "no_compile": "yes", 
   "no_target_file": "yes", 
-  "print_files_after_run": [
-    "stderr.log", 
-    "stdout.log"
-  ], 
   "process_in_tmp": "yes", 
   "program": "yes", 
   "run_cmds": {
     "mpi": {
       "ignore_return_code": "no", 
+      "print_files_after_run": [
+        "stderr.log", 
+        "stdout.log"
+      ], 
+      "run_deps": {
+        "dataset-seissol": {
+          "local": "yes", 
+          "name": "SeisSol dataset (netcdf)", 
+          "sort": 20, 
+          "tags": "dataset,seissol,vnetcdf"
+        }, 
+        "lib-seissol": {
+          "local": "yes", 
+          "name": "SeisSol Library (netcdf)", 
+          "sort": 10, 
+          "tags": "lib,seissol,vnetcdf"
+        }
+      }, 
       "run_time": {
         "post_process_cmds": [
           "python $#src_path_local#$ck_process.py"
@@ -28,33 +42,41 @@
           "stderr.log"
         ]
       }
-    }
-  }, 
-  "run_deps": {
-    "dataset-seissol": {
-      "local": "yes", 
-      "name": "SeisSol dataset (netcdf)", 
-      "sort": 20, 
-      "tags": "dataset,seissol,vnetcdf"
     }, 
-    "lib-seissol": {
-      "local": "yes", 
-      "name": "SeisSol Library (netcdf)", 
-      "sort": 10, 
-      "tags": "lib,seissol,vnetcdf"
-    } 
+    "print-last-job-log": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "post_process_cmds": [
+          "python $#src_path_local#$ck_print_job_log.py"
+        ], 
+        "post_process_via_ck": "yes", 
+        "run_cmd_main": " ",
+        "skip_print_execution_time":"yes"
+      }
+    }, 
+    "print-last-job-status": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "post_process_cmds": [
+          "python $#src_path_local#$ck_print_job_status.py"
+        ], 
+        "post_process_via_ck": "yes", 
+        "run_cmd_main": " ",
+        "skip_print_execution_time":"yes"
+      }
+    }
   }, 
   "run_vars": {
     "MPI_NUM_PROCESSES": 1, 
-    "OMP_NUM_THREADS": 1,
-    "SBATCH_JOB_NAME": "ck-scc18",
-    "SBATCH_TIME":"00:05:00",
-    "SBATCH_NODES":20,
-    "SBATCH_NTASKS_PER_CORE":1,
-    "SBATCH_NTASKS_PER_NODE":1,
-    "SBATCH_CPU_PER_TASK":1,
-    "SBATCH_PARTITION":"normal",
-    "SBATCH_CONSTRAINT":"mc"
+    "OMP_NUM_THREADS": 1, 
+    "SBATCH_CONSTRAINT": "mc", 
+    "SBATCH_CPU_PER_TASK": 1, 
+    "SBATCH_JOB_NAME": "ck-scc18", 
+    "SBATCH_NODES": 20, 
+    "SBATCH_NTASKS_PER_CORE": 1, 
+    "SBATCH_NTASKS_PER_NODE": 1, 
+    "SBATCH_PARTITION": "normal", 
+    "SBATCH_TIME": "00:05:00"
   }, 
   "tags": [
     "scientific", 
