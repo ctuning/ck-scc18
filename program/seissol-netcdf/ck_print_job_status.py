@@ -58,7 +58,7 @@ def ck_postprocess(i):
                     found=True
 
              if not found:
-                ck.out('JOB not found in the queue - maybe completed?!')
+                ck.out('JOB not found in the queue - likely completed - check logs!')
 
     # Finish
     rr['return']=0

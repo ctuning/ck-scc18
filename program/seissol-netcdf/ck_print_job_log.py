@@ -36,6 +36,8 @@ def ck_postprocess(i):
 
     d=r['dict']
 
+    f='stdout.log' # Output file without job logs
+
     env=d.get('env',{})
     job_id=d.get('job_id','')
     if job_id!='':
@@ -44,21 +46,27 @@ def ck_postprocess(i):
           if jm=='slurm':
              f='slurm-'+job_id+'.out'
 
-             ck.out('Trying to read '+f+' ...')
+    # Reading output
+    if f!='':
+       ck.out('Trying to read '+f+' ...')
 
-             r=ck.load_text_file({'text_file':f})
-             if r['return']>0: 
-                if r['return']!=16: return r
+       r=ck.load_text_file({'text_file':f})
+       if r['return']>0: 
+          if r['return']!=16: return r
 
-                ck.out('')
-                ck.out('The log file from the last job was not found - maybe this job did not start yet?!')
+          ck.out('')
+          ck.out('The log file from the last job was not found - maybe this job did not start yet?!')
 
-                return {'return':0}
+          return {'return':0}
 
-             s=r['string']
+       s=r['string']
 
-             ck.out('')
-             ck.out(s)
+       ck.out('')
+       ck.out(s)
+
+       # Validating output
+       ck.out('***************************************************************************************')
+       ck.out('TBD: validate output against authors results ...')
 
     # Finish
     rr['return']=0

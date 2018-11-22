@@ -43,7 +43,7 @@
         ]
       }
     }, 
-    "print-last-job-log": {
+    "print-last-job-log-and-validate-results": {
       "ignore_return_code": "no", 
       "run_time": {
         "post_process_cmds": [
