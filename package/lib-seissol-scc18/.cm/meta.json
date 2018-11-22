@@ -6,7 +6,7 @@
     "install_env": {
       "CK_SEISSOL_COMPILE_MODE": "release", 
       "CK_SEISSOL_GENERATED_KERNELS": "yes", 
-      "CK_SEISSOL_HDF5": "none", 
+      "CK_SEISSOL_HDF5": "no", 
       "CK_SEISSOL_ORDER": "6", 
       "CK_SEISSOL_PARALLELIZATION": "hybrid", 
       "CK_SEISSOL_TARGET_ARCH": "dsnb", 
