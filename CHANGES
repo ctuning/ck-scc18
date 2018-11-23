@@ -1,3 +1,5 @@
+* 20181123 - [FGG] added output validation and small data set
+
 * 20181122 - [FGG] major update of SeisSol library (including build customization)
                    and execution with Job managers (SLURM)
 

@@ -5,6 +5,7 @@
 
 import os
 import sys
+import shutil
 
 # *********************************************************************************
 # Pre-process function
@@ -41,12 +42,10 @@ def ck_preprocess(i):
 
         if f=='parameters.par':
            fparameter=f2
-
-        if not os.path.isfile(f2):
+           # Copy parameter file instead of linking since it can be updated in tmp directory
+           shutil.copy2(f1, f2)
+        elif not os.path.isfile(f2):
            os.system('ln -s '+f1+' '+f2)
-
-#        Bad idea:
-#        shutil.copy2(f1, f2)
 
     ck.out('')
 
@@ -55,6 +54,19 @@ def ck_preprocess(i):
        r=ck.load_text_file({'text_file':fparameter})
        if r['return']>0: return r
        s=r['string']
+
+       # Replace some vars
+       x=env.get('LIMIT_SEISSOL_TIME','')
+       if x!='':
+          j=s.find('EndTime =')
+          if j>0:
+             j1=s.find('\n', j)
+             if j1>0:
+                s=s[:j+9]+' '+str(x)+s[j1:]
+
+                # Record updated parameter file
+                r=ck.save_text_file({'text_file':fparameter, 'string':s})
+                if r['return']>0: return r
 
        # Search
        for x in ["OutputFile = '", "checkPointFile = '", "MeshFile = '"]:
