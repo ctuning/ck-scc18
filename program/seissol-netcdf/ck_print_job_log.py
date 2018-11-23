@@ -6,6 +6,7 @@
 import os
 import sys
 
+# Taken from https://dl.acm.org/citation.cfm?id=3126948 (See section A.5)
 validation=[
   {"key":" Wall time", "value":"50007.9 seconds"},
   {"key":" Total   measured HW-GFLOP", "value":"4.68102e+10"},
