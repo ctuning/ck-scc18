@@ -10,7 +10,7 @@
     "seissol-proxy": {
       "ignore_return_code": "no", 
       "run_time": {
-        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/seissol_proxy", 
+        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/seissol_proxy $<<CELLS>>$ $<<TIMESTEP>>$ $<<KERNEL>>$", 
         "run_output_files": []
       },
       "sort":10

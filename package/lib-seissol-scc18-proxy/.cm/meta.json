@@ -49,7 +49,7 @@
       "local": "yes", 
       "name": "Tool Scons Python", 
       "skip_default": "yes", 
-      "sort": 16, 
+      "sort": 110, 
       "tags": "tool,scons"
     }
   }, 
