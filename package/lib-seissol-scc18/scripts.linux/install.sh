@@ -65,6 +65,8 @@ fi
 # i.e.,  arch: .  Valid values are: ['snoarch', 'dnoarch', 'swsm', 'dwsm', 'ssnb', 'dsnb', 'sknc', 'dknc', 'shsw', 'dhsw', 'sknl', 'dknl'
 # dsnb = sandy bridge
 scons -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS}  \
+       logLevel=${CK_SEISSOL_LOG_LEVEL} \
+       logLevel0=${CK_SEISSOL_LOG_LEVEL0} \
        order=${CK_SEISSOL_ORDER} \
        compileMode=${CK_SEISSOL_COMPILE_MODE} \
        generatedKernels=${CK_SEISSOL_GENERATED_KERNELS} \

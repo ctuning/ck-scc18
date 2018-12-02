@@ -1,3 +1,5 @@
+* 20181202 - [FGG] fixed proxy app and added more customization for SeisSol build
+
 * 20181123 - [FGG] added output validation and small data set
 
 * 20181122 - [FGG] major update of SeisSol library (including build customization)

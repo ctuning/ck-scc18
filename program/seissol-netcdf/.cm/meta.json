@@ -41,7 +41,8 @@
           "stdout.log", 
           "stderr.log"
         ]
-      }
+      },
+      "sort":-10
     }, 
     "print-last-job-log-and-validate-results": {
       "ignore_return_code": "no", 
