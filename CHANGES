@@ -1,3 +1,5 @@
+* 20181203 - [FGG] major update to support Intel compilers and MPI
+
 * 20181202 - [FGG] fixed proxy app and added more customization for SeisSol build
 
 * 20181123 - [FGG] added output validation and small data set

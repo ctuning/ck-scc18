@@ -48,6 +48,7 @@
     }, 
     "lib-mpi": {
       "local": "yes", 
+      "repeat_at_the_end": "yes",
       "name": "MPI Library", 
       "sort": 11, 
       "tags": "lib,mpi"

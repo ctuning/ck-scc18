@@ -51,6 +51,7 @@
     }, 
     "mpi": {
       "local": "yes", 
+      "repeat_at_the_end": "yes",
       "name": "MPI library", 
       "sort": 2, 
       "tags": "lib,mpi"

@@ -24,6 +24,13 @@
           "name": "SeisSol Library (netcdf)", 
           "sort": 10, 
           "tags": "lib,seissol,vnetcdf"
+        },
+        "lib-mpi": {
+          "local": "yes", 
+          "repeat_at_the_end": "yes",
+          "name": "MPI Library", 
+          "sort": 100, 
+          "tags": "lib,mpi"
         }
       }, 
       "run_time": {
