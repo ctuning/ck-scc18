@@ -1,79 +1,80 @@
 {
-  "comment": "RECOMMENDED", 
+  "comment": "RECOMMENDED",
   "customize": {
-    "extra_dir": "", 
-    "git_src_dir": "src", 
+    "extra_dir": "",
+    "git_src_dir": "src",
     "install_env": {
-      "CK_SEISSOL_TARGET_ARCH": "dsnb", 
-      "PACKAGE_AUTOGEN": "NO", 
-      "PACKAGE_BUILD_TYPE": "make", 
-      "PACKAGE_CONFIGURE_FLAGS": "", 
-      "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
-      "PACKAGE_GIT": "YES", 
-      "PACKAGE_GIT_CHECKOUT": "scc18", 
-      "PACKAGE_GIT_CLONE_FLAGS": "--recursive", 
-      "PACKAGE_PATCH": "YES", 
-      "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
-      "PACKAGE_SKIP_CLEAN_OBJ": "YES", 
-      "PACKAGE_SKIP_CLEAN_PACKAGE": "NO", 
-      "PACKAGE_SKIP_CLEAN_SRC_DIR": "YES", 
-      "PACKAGE_SKIP_LINUX_MAKE": "YES", 
-      "PACKAGE_SUB_DIR": "src", 
+      "CK_SEISSOL_TARGET_ARCH": "dsnb",
+      "PACKAGE_AUTOGEN": "NO",
+      "PACKAGE_BUILD_TYPE": "make",
+      "PACKAGE_CONFIGURE_FLAGS": "",
+      "PACKAGE_CONFIGURE_FLAGS_LINUX": "",
+      "PACKAGE_GIT": "YES",
+      "PACKAGE_GIT_CHECKOUT": "scc18",
+      "PACKAGE_GIT_CLONE_FLAGS": "--recursive",
+      "PACKAGE_PATCH": "YES",
+      "PACKAGE_SKIP_CLEAN_INSTALL": "NO",
+      "PACKAGE_SKIP_CLEAN_OBJ": "YES",
+      "PACKAGE_SKIP_CLEAN_PACKAGE": "NO",
+      "PACKAGE_SKIP_CLEAN_SRC_DIR": "YES",
+      "PACKAGE_SKIP_LINUX_MAKE": "YES",
+      "PACKAGE_SUB_DIR": "src",
       "PACKAGE_URL": "https://github.com/SeisSol/SeisSol.git"
-    }, 
+    },
     "version": "scc18-proxy"
-  }, 
+  },
   "deps": {
     "compiler": {
-      "local": "yes", 
-      "name": "C compiler", 
-      "sort": 1, 
+      "local": "yes",
+      "name": "C compiler",
+      "sort": 1,
       "tags": "compiler,lang-cpp"
-    }, 
+    },
     "lib-xsmm": {
-      "local": "yes", 
-      "name": "Intel XSMM lib", 
-      "sort": 16, 
+      "local": "yes",
+      "name": "Intel XSMM lib",
+      "skip_default": "yes",
+      "sort": 16,
       "tags": "lib,intel,xsmm"
-    }, 
+    },
     "python": {
-      "local": "yes", 
-      "name": "Python < 3", 
-      "sort": 100, 
-      "tags": "compiler,python", 
+      "local": "yes",
+      "name": "Python < 3",
+      "sort": 100,
+      "tags": "compiler,python",
       "version_to": [
         3
       ]
-    }, 
+    },
     "tool-scons": {
-      "local": "yes", 
-      "name": "Tool Scons Python", 
-      "skip_default": "yes", 
-      "sort": 110, 
+      "local": "yes",
+      "name": "Tool Scons Python",
+      "skip_default": "yes",
+      "sort": 110,
       "tags": "tool,scons"
     }
-  }, 
+  },
   "end_full_path": {
     "linux": "install/bin/seissol_proxy"
-  }, 
-  "need_cpu_info": "yes", 
+  },
+  "need_cpu_info": "yes",
   "only_for_host_os_tags": [
     "linux"
-  ], 
+  ],
   "only_for_target_os_tags": [
     "linux"
-  ], 
-  "process_script": "install", 
-  "soft_uoa": "0d9ef0591d400f95", 
-  "suggested_path": "lib-seissol-proxy", 
+  ],
+  "process_script": "install",
+  "soft_uoa": "0d9ef0591d400f95",
+  "suggested_path": "lib-seissol-proxy",
   "tags": [
-    "lib", 
-    "seissol-proxy", 
-    "vnetcdf", 
+    "lib",
+    "seissol-proxy",
+    "vnetcdf",
     "v201703"
-  ], 
+  ],
   "use_scripts_from_another_entry": {
-    "data_uoa": "cd9ccc74060b3d18", 
+    "data_uoa": "cd9ccc74060b3d18",
     "module_uoa": "script"
   }
 }
