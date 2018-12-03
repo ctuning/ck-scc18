@@ -18,25 +18,6 @@ PREFIX=${INSTALL_DIR}/install
 mkdir -p $PREFIX
 
 ######################################################################################
-# Print info about possible issues
-echo ""
-echo "Note that you sometimes need to upgrade your pip to the latest version"
-echo "to avoid well-known issues with user/system space installation:"
-
-SUDO="sudo "
-if [[ ${CK_PYTHON_PIP_BIN_FULL} == /home/* ]] ; then
-  SUDO=""
-fi
-
-######################################################################################
-# Check if has --system option
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --help > tmp-pip-help.tmp
-if grep -q "\-\-system" tmp-pip-help.tmp ; then
- SYS=" --system"
-fi
-rm -f tmp-pip-help.tmp
-
-######################################################################################
 # Obtaining spack
 echo "****************************************************************"
 echo "Obtaining spack ..."
@@ -47,6 +28,8 @@ git clone https://github.com/spack/spack spack-bin
 
 SPACK_DIR=${INSTALL_DIR}/spack-bin
 SPACK_INSTALL=${INSTALL_DIR}/spack
+
+. spack-bin/share/spack/setup-env.sh
 
 # Add path to Spack
 export PATH=${SPACK_DIR}/bin:$PATH
@@ -76,14 +59,34 @@ spack compiler find
 echo "spack install python@2.7.15 scons@3.0.1 ^python@2.7.15"
 spack install python@2.7.15 scons@3.0.1 ^python@2.7.15
 
+if [ "${?}" != "0" ] ; then
+    echo "Error: spack installation failed!"
+    exit 1
+fi
+
 echo "spack install openmpi@3.1.3 %gcc"
 spack install openmpi@3.1.3 %gcc
+
+if [ "${?}" != "0" ] ; then
+    echo "Error: spack installation failed!"
+    exit 1
+fi
 
 echo "spack install libxsmm@1.8.2 %gcc"
 spack install libxsmm@1.8.2 %gcc
 
+if [ "${?}" != "0" ] ; then
+    echo "Error: spack installation failed!"
+    exit 1
+fi
+
 echo "spack install netcdf@4.4.1 %gcc +mpi -shared ^openmpi@3.1.3 ^hdf5@1.10.4 +mpi +fortran -shared"
 spack install netcdf@4.4.1 %gcc +mpi -shared ^openmpi@3.1.3 ^hdf5@1.10.4 +mpi +fortran -shared
+
+if [ "${?}" != "0" ] ; then
+    echo "Error: spack installation failed!"
+    exit 1
+fi
 
 # Add python, scons and openmpi to Path
 export PATH=${SPACK_INSTALL}/python/bin:${SPACK_INSTALL}/scons/bin:$PATH
@@ -100,7 +103,7 @@ EXTRA_PYTHON_SITE=${INSTALL_DIR}/python-lib
 rm -rf ${EXTRA_PYTHON_SITE}
 mkdir -p ${EXTRA_PYTHON_SITE}
 
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed lxml scipy -t ${EXTRA_PYTHON_SITE}  ${SYS}
+python2 -m pip install --ignore-installed lxml scipy -t ${EXTRA_PYTHON_SITE}  ${SYS}
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1

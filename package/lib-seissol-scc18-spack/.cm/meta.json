@@ -28,7 +28,7 @@
       "PACKAGE_SUB_DIR": "src", 
       "PACKAGE_URL": "https://github.com/SeisSol/SeisSol.git"
     }, 
-    "version": "scc18"
+    "version": "scc18-spack"
   }, 
   "deps": {
     "compiler": {
