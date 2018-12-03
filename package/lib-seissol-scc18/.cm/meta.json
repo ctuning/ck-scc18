@@ -1,3 +1,4 @@
+
 {
   "comment": "RECOMMENDED",
   "customize": {
@@ -55,6 +56,7 @@
       "local": "yes",
       "name": "MPI library",
       "repeat_at_the_end": "yes",
+      "skip_default": "yes",
       "sort": 2,
       "tags": "lib,mpi"
     },
