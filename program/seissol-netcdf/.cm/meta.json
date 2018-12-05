@@ -84,6 +84,7 @@
     "SBATCH_NTASKS_PER_CORE": 1, 
     "SBATCH_NTASKS_PER_NODE": 1, 
     "SBATCH_PARTITION": "normal", 
+    "SBATCH_MEM": "100000", 
     "SBATCH_TIME": "00:05:00"
   }, 
   "tags": [

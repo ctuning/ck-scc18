@@ -8,5 +8,5 @@
 #SBATCH --cpus-per-task=$<<SBATCH_CPU_PER_TASK>>$
 #SBATCH --partition=$<<SBATCH_PARTITION>>$
 #SBATCH --constraint=$<<SBATCH_CONSTRAINT>>$
-
+#SBATCH --mem=$<<SBATCH_MEM>>$
 ../$1
