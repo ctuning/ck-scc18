@@ -1,4 +1,5 @@
 * 20181205 - [FGG] moved xsmm and netcdf to ck-env
+                   added scripts to install deps via spack and easybuild
 
 * 20181203 - [FGG] major update to support Intel compilers and MPI
 
