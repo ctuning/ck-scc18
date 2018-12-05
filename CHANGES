@@ -1,3 +1,5 @@
+* 20181205 - [FGG] moved xsmm and netcdf to ck-env
+
 * 20181203 - [FGG] major update to support Intel compilers and MPI
 
 * 20181202 - [FGG] fixed proxy app and added more customization for SeisSol build
