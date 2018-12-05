@@ -53,12 +53,14 @@
       "tags": "lib,intel,xsmm"
     },
     "mpi": {
+      "add_to_path":"yes",
       "local": "yes",
       "name": "MPI library",
       "repeat_at_the_end": "yes",
       "skip_default": "yes",
       "sort": 2,
-      "tags": "lib,mpi"
+      "tags": "lib,mpi",
+      "version_to":[2,99,99]
     },
     "netcdf": {
       "local": "yes",
