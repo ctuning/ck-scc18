@@ -1,3 +1,5 @@
+* 20181212 - [FGG] fixed soft linking of a dataset in a tmp repository
+
 * 20181205 - [FGG] moved xsmm and netcdf to ck-env
                    added scripts to install deps via spack and easybuild
 

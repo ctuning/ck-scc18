@@ -44,7 +44,8 @@ def ck_preprocess(i):
            fparameter=f2
            # Copy parameter file instead of linking since it can be updated in tmp directory
            shutil.copy2(f1, f2)
-        elif not os.path.isfile(f2):
+        else:
+           os.system('rm -f '+f2) # delete possibly outdated soft link (if dataset package is reinstalled, path may change)
            os.system('ln -s '+f1+' '+f2)
 
     ck.out('')
