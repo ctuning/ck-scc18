@@ -31,6 +31,7 @@
     - [Using "Piz Daint" platform](#using-piz-daint-platform)
   - [Changing other parameters](#changing-other-parameters)
   - [Running SeisSol binary without CK](#running-seissol-binary-without-ck)
+  - [Creating a self-contained snapshot of this workflow](#creating-a-self-contained-snapshot-of-this-workflow)
 - [Contacting the CK community](#contacting-the-ck-community)
 - [Acknowledgments](#acknowledgments)
 - [Future work](#future-work)
@@ -746,11 +747,30 @@ $ ck virtual env --tags=lib,seissol
 ## Creating a self-contained snapshot of this workflow
 
 
-You can create a self-contained snapshot of this workflow with all required CK repositories
-as follows:
+You can create a snapshot of this workflow with all dependencies as follows:
 ```
 $ ck snapshot artifact --repo=ck-scc18
 ```
+
+This command will create a self-contained zip file with this repository, 
+all CK sub-repositories, CK framework, and a few environment scripts 
+allowing you to share your stable workflow with others.
+
+Further details:
+* [Preparing CK snapshots](https://github.com/ctuning/ck/wiki/Adding-new-workflows#preparing-ck-artifact-pack-for-digital-libraries)
+* [Preparing CK docker images](https://github.com/ctuning/ck/wiki/Adding-new-workflows#preparing-docker-image)
+* [Sharing CK workflows via Digital Libraries along with publications](https://dl.acm.org/reproducibility.cfm)
+
+
+
+
+
+
+## Adding new workflows and components
+
+Please follow this [guide](https://github.com/ctuning/ck/wiki/Adding-new-workflows) (will be updated in Q1 2019)
+and feel free to get in touch with the [CK community](https://github.com/ctuning/ck/wiki/Contacts)!
+
 
 
 
