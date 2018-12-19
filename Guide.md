@@ -32,6 +32,7 @@
   - [Changing other parameters](#changing-other-parameters)
   - [Running SeisSol binary without CK](#running-seissol-binary-without-ck)
   - [Creating a self-contained snapshot of this workflow](#creating-a-self-contained-snapshot-of-this-workflow)
+  - [Adding new workflows and components](#adding-new-workflows-and-components)
 - [Contacting the CK community](#contacting-the-ck-community)
 - [Acknowledgments](#acknowledgments)
 - [Future work](#future-work)
