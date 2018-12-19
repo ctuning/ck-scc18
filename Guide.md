@@ -50,6 +50,7 @@
 * Todd Gamblin, LLNL (spack feedback)
 * Kenneth Hoste, Ghent University (EasyBuild feedback)
 * Damian Alvarez, Jülich Supercomputing Centre (testing and EasyBuild feedback)
+* Anton Lokhmotov, dividiti (feedback)
 * Carsten Uphoff, TUM (testing and feedback)
 * Michael Bader, TUM (testing and feedback)
 
