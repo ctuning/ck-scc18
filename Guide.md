@@ -745,7 +745,7 @@ $ ck virtual env --tags=lib,seissol
 
 
 
-## Creating a self-contained snapshot of this workflow
+# Creating a self-contained snapshot of this workflow
 
 
 You can create a snapshot of this workflow with all dependencies as follows:
@@ -767,7 +767,7 @@ Further details:
 
 
 
-## Adding new workflows and components
+# Adding new workflows and components
 
 Please follow this [guide](https://github.com/ctuning/ck/wiki/Adding-new-workflows) (will be updated in Q1 2019)
 and feel free to get in touch with the [CK community](https://github.com/ctuning/ck/wiki/Contacts)!
