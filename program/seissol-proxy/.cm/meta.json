@@ -1,47 +1,47 @@
 {
-  "backup_data_uid": "f3429eb04e3556f3", 
-  "data_name": "seissol-proxy", 
-  "no_compile": "yes", 
-  "no_target_file": "yes", 
-  "print_files_after_run": [], 
-  "process_in_tmp": "yes", 
-  "program": "yes", 
+  "backup_data_uid": "f3429eb04e3556f3",
+  "data_name": "seissol-proxy",
+  "no_compile": "yes",
+  "no_target_file": "yes",
+  "print_files_after_run": [],
+  "process_in_tmp": "yes",
+  "program": "yes",
   "run_cmds": {
-    "seissol-proxy": {
-      "ignore_return_code": "no", 
-      "run_time": {
-        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/seissol_proxy $<<CELLS>>$ $<<TIMESTEP>>$ $<<KERNEL>>$", 
-        "run_output_files": []
-      },
-      "sort":10
-    },
     "flops-per-cell": {
-      "ignore_return_code": "no", 
+      "ignore_return_code": "no",
       "run_time": {
-        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/flops_per_cell", 
+        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/flops_per_cell",
         "run_output_files": []
       },
-      "sort":20
+      "sort": 20
+    },
+    "seissol-proxy": {
+      "ignore_return_code": "no",
+      "run_time": {
+        "run_cmd_main": "$<<CK_ENV_LIB_SEISSOL_PROXY_BIN>>$/seissol_proxy $<<CELLS>>$ $<<TIMESTEP>>$ $<<KERNEL>>$",
+        "run_output_files": []
+      },
+      "sort": 10
     }
-  }, 
+  },
   "run_deps": {
     "lib-seissol-proxy": {
-      "local": "yes", 
-      "name": "SeisSol Library (proxy)", 
-      "sort": 10, 
+      "local": "yes",
+      "name": "SeisSol Library (proxy)",
+      "sort": 10,
       "tags": "lib,seissol-proxy"
     }
-  }, 
+  },
   "run_vars": {
-    "CELLS":10,
-    "TIMESTEP":10,
-    "KERNEL":"all"
-  }, 
+    "CELLS": 10,
+    "KERNEL": "all",
+    "TIMESTEP": 10
+  },
   "tags": [
-    "scientific", 
-    "seissol-proxy", 
-    "supercomputing", 
-    "scc", 
+    "scientific",
+    "seissol-proxy",
+    "supercomputing",
+    "scc",
     "2018"
   ]
 }

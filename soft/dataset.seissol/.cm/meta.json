@@ -1,14 +1,14 @@
 {
-  "auto_detect": "no", 
+  "auto_detect": "no",
   "customize": {
-    "check_that_exists": "yes", 
-    "ck_version": 10, 
+    "check_that_exists": "yes",
+    "ck_version": 10,
     "env_prefix": "CK_ENV_DATASET_SEISSOL"
-  }, 
-  "deps": {}, 
-  "soft_name": "SEISSOL dataset", 
+  },
+  "deps": {},
+  "soft_name": "SEISSOL dataset",
   "tags": [
-    "dataset", 
+    "dataset",
     "seissol"
   ]
 }

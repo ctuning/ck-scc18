@@ -1,23 +1,23 @@
 {
-  "check_exit_status": "yes", 
-  "comment": "requires around 700MB!", 
+  "check_exit_status": "yes",
+  "comment": "requires around 700MB!",
   "customize": {
-    "extra_dir": "", 
-    "force_ask_path": "yes", 
-    "install_env": {}, 
-    "no_os_in_suggested_path": "yes", 
-    "no_ver_in_suggested_path": "yes", 
+    "extra_dir": "",
+    "force_ask_path": "yes",
+    "install_env": {},
+    "no_os_in_suggested_path": "yes",
+    "no_ver_in_suggested_path": "yes",
     "version": "2004"
-  }, 
-  "end_full_path_universal": "data/parameters.par", 
-  "process_script": "install", 
-  "soft_uoa": "57f42cb43c398078", 
-  "suggested_path": "dataset-seissol-sumatra-andaman-2004", 
+  },
+  "end_full_path_universal": "data/parameters.par",
+  "process_script": "install",
+  "soft_uoa": "57f42cb43c398078",
+  "suggested_path": "dataset-seissol-sumatra-andaman-2004",
   "tags": [
-    "dataset", 
-    "seissol", 
-    "tpv33", 
-    "vnetcdf", 
+    "dataset",
+    "seissol",
+    "tpv33",
+    "vnetcdf",
     "v201703"
   ]
 }
