@@ -14,12 +14,13 @@ It supports our long-term community initiative to improve reproducibility of exp
 from published papers, automate artifact evaluation, and help the community share code, 
 data and workflows as reusable components: http://cTuning.org/ae .
 
+See also [this CK repository](https://github.com/ctuning/ck-scc) to prepare digital artifacts for the Student Cluster Competition Reproducibility Challenge.
 
 
 
 # Workflow authors and contributors
 
-* Grigori Fursin, dividiti/cTuning foundation
+* Grigori Fursin, cTuning foundation
 * Flavio Vella, Free University of Bozen-Bolzano
 * Stephen Herbein, LLNL
 * Carsten Uphoff, TUM
